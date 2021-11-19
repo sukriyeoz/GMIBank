@@ -41,12 +41,67 @@ public class US003_Registration_page_password {
     public void user_enter_the_same_password_again() {
         registerPage.getPassWord2.sendKeys("NOLOW1=");
     }
-    @Given("user clicks on the register_botton")
-    public void user_clicks_on_the_register_botton() {
-        registerPage.registerButton.click();
-    }
-    @Then("user verifies the success_message")
-    public void user_verifies_the_success_message() {
+//    @Given("user clicks on the register_botton")
+//    public void user_clicks_on_the_register_botton() {
+//        registerPage.registerButton.click();
+//
+//    }
+
+    @Given("user enters a password which not include uppercase char")
+    public void user_enters_a_password_which_not_include_uppercase_char() {
+        registerPage.getPassWord1.sendKeys("noupper1=");
 
     }
+
+    @Given("user enter the same upperpassword again")
+    public void user_enter_the_same_upperpassword_again() {
+        registerPage.getPassWord2.sendKeys("noupper1=");
+
+    }
+
+    @Given("user enters a password which not include number")
+    public void user_enters_a_password_which_not_include_number() {
+        registerPage.getPassWord1.sendKeys("noNumber=");
+
+    }
+    @Given("user enter the same numberpassword again")
+    public void user_enter_the_same_numberpassword_again() {
+        registerPage.getPassWord2.sendKeys("noNumber=");
+
+    }
+
+
+
+    @Then("close the application")
+    public void close_the_application() {
+        Driver.closeDriver();
+    }
+    @Given("user enters a password which not include special_char")
+    public void user_enters_a_password_which_not_include_special_char() {
+        registerPage.getPassWord1.sendKeys("NoSpecial1");
+
+    }
+    @Given("user enter the same special_char_password again")
+    public void user_enter_the_same_special_char_password_again() {
+       registerPage.getPassWord2.sendKeys("NoSpecial1");
+    }
+
+    @Given("user enters a password which is less than seven char")
+    public void user_enters_a_password_which_is_less_than_seven_char() {
+        registerPage.getPassWord1.sendKeys("Less7-");
+    }
+    @Given("user enter the same seven_char_password again")
+    public void user_enter_the_same_seven_char_password_again() {
+        registerPage.getPassWord2.sendKeys("Less7-");
+    }
+    @Given("user enters a password which is include all required field")
+    public void user_enters_a_password_which_is_include_all_required_field() {
+        registerPage.getPassWord1.sendKeys("Strong7=");
+    }
+    @Given("user enter the same strong_password again")
+    public void user_enter_the_same_strong_password_again() {
+        registerPage.getPassWord2.sendKeys("Strong7=");
+
+    }
+
 }
