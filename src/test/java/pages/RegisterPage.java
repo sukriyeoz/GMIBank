@@ -39,8 +39,18 @@ public class RegisterPage {
     @FindBy(id= "secondPassword")
     public WebElement getPassWord2;
 
-    @FindBy(id = "register-submit")
-    public WebElement registerButton;
+
+
+//    @FindBy(id = "strengthBar")
+//    public WebElement passwordStrengthBar;
+
+   // @FindBy (class="invalid-feedback")
+    //public WebElement passwordMessage;
+
+
+
+ //   @FindBy(id = "register-submit")
+ //   public WebElement registerButton;
 
 
 

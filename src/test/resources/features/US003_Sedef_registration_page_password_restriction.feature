@@ -1,4 +1,4 @@
-@password_strenght
+@password_strength
 Feature: US003_registration_password
 
   @password_lowercase
@@ -8,6 +8,7 @@ Feature: US003_registration_password
      |getSSN |fName|lName|address1|phoneNumber |userName   |emailAddress|
     |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
     Given user enters a password which not include lowercase char
+  #  Then user get password_strength message
     And user enter the same password again
   #  And user clicks on the register_botton
     Then close the application

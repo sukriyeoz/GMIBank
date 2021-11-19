@@ -3,6 +3,9 @@ package stepdefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.RegisterPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -37,6 +40,7 @@ public class US003_Sedef_Registration_page_password {
     public void user_enters_a_password_which_not_include_lowercase_char() {
         registerPage.getPassWord1.sendKeys("NOLOW1=");
     }
+
     @Given("user enter the same password again")
     public void user_enter_the_same_password_again() {
 
@@ -110,5 +114,15 @@ public class US003_Sedef_Registration_page_password {
         registerPage.getPassWord2.sendKeys("Strong7=");
 
     }
+//
+//    @Then("user get password_strength message")
+//    public void user_get_password_strength_message() throws InterruptedException {
+//
+//        Thread.sleep(1000);
+//        String passwordStrengthBar = registerPage.passwordStrengthBar.getText();
+//        String expectedSuccessMessage="Your password should contain at least one uppercase,one digit, one lowercase and one special character";
+//        Assert.assertEquals(expectedSuccessMessage,passwordStrengthBar);
+//      //  registerPage.passwordStrengthBar.getText("Your password should contain at least one uppercase,one digit, one lowercase and one special character")
+//    }
 
 }
