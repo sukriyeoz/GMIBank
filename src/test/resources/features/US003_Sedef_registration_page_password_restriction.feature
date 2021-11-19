@@ -9,7 +9,7 @@ Feature: US003_registration_password
     |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
     Given user enters a password which not include lowercase char
     And user enter the same password again
-    And user clicks on the register_botton
+  #  And user clicks on the register_botton
     Then close the application
 
   @password_uppercase
@@ -20,7 +20,7 @@ Feature: US003_registration_password
         |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
       Given user enters a password which not include uppercase char
       And user enter the same upperpassword again
-      And user clicks on the register_botton
+   #   And user clicks on the register_botton
       Then close the application
   @password_number
       Scenario: TC003_include_number_password
@@ -30,7 +30,7 @@ Feature: US003_registration_password
           |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
         Given user enters a password which not include number
         And user enter the same numberpassword again
-        And user clicks on the register_botton
+    #    And user clicks on the register_botton
         Then close the application
 
   @password_special_char
@@ -41,7 +41,7 @@ Feature: US003_registration_password
       |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
     Given user enters a password which not include special_char
     And user enter the same special_char_password again
-    And user clicks on the register_botton
+    # And user clicks on the register_botton
     Then close the application
 
   @password_seven_char
@@ -52,7 +52,7 @@ Feature: US003_registration_password
       |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
     Given user enters a password which is less than seven char
     And user enter the same seven_char_password again
-    And user clicks on the register_botton
+    # And user clicks on the register_botton
     Then close the application
 
   @password_strong_chars
@@ -63,7 +63,7 @@ Feature: US003_registration_password
       |326547896  |Alexa|Amazon       |1861 Amazon Dr Florida  |6785214552|AlexaAmazon|alexa@amazon.com         |
     Given user enters a password which is include all required field
     And user enter the same strong_password again
-    And user clicks on the register_botton
+   # And user clicks on the register_botton
     Then close the application
 
 

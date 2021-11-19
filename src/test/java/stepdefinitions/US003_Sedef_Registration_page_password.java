@@ -9,7 +9,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class US003_Registration_page_password {
+public class US003_Sedef_Registration_page_password {
 
     RegisterPage registerPage = new RegisterPage();
 
