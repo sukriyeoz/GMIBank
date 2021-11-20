@@ -15,6 +15,9 @@ public class MainPage {
     public WebElement humanIcon;
     @FindBy (xpath = "//span[normalize-space()='Sign in']")
     public WebElement singIn;
+    @FindBy (xpath = "//span[normalize-space()='Register']")
+    public WebElement register;
+
 
 
 
