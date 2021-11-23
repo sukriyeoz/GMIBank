@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.MainPage;
 import pages.RegisterPage;
@@ -52,15 +53,21 @@ public class US001_US002_Emrah {
         registerPage.registerButton.click();
     }
 
-//    @Then("verify success message")
-//    public void verifySuccessMessage() {
+    @Then("verify success message")
+    public void verifySuccessMessage() {
+        ReusableMethods.waitFor(5);
+        Assert.assertTrue(registerPage.successMessage.isDisplayed());
+        System.out.println(registerPage.successMessage.getText());
+
 //        Driver.getDriver().findElement(By.xpath("//div[@class='Toastify__toast-body']"));
 //        String alertText = Driver.getDriver().switchTo().alert().getText();
 //        System.out.println(alertText);
-//    }
+    }
 
 //    @Then("close the page")
 //    public void closeThePage() {
 //        Driver.closeDriver();
 //    }
 }
+
+
