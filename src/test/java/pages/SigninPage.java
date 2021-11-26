@@ -13,4 +13,13 @@ public class SigninPage {
     @FindBy(xpath = "//input[@id='username']")
     public WebElement userName;
 
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "//button[@type='submit']//span[contains(text(),'Sign in')]")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
+    public WebElement failMessage;
+
 }
