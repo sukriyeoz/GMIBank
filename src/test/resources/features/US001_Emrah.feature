@@ -8,5 +8,5 @@ Feature:
     And click Register in button
     And user enters fields with valid data
     And user clicks on the register button
-#    Then verify success message
+    Then verify success message
 #    Then close the page
