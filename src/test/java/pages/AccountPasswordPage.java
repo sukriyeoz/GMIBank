@@ -10,16 +10,18 @@ public class AccountPasswordPage {
          PageFactory.initElements(Driver.getDriver(),this);
      }
 
-     @FindBy(xpath="//input[@name='currentPassword']")
+     @FindBy(xpath="//input[@placeholder='Please enter current password']")
     public WebElement currentPassword;
-     @FindBy(xpath="//input[@name='newPassword']")
+     @FindBy(xpath="//input[@placeholder='Please enter new password']")
     public WebElement newPassword;
-     @FindBy(xpath= "//li[@class='point'][1]")
+     @FindBy(xpath= "//li[@class='point'][2]")
     public WebElement  line1;
-    @FindBy(xpath="//input[@name='confirmPassword']")
+    @FindBy(xpath="//input[@placeholder='Please confirm your password']")
     public WebElement confirmPassword;
     @FindBy(xpath="//button[@type='submit']//span[text()='Save']")
     public WebElement saveButton;
+    @FindBy(xpath="//div[text()='New password should be different from the current one.']")
+    public WebElement invalidFeedback;
 
 
 }
