@@ -2,15 +2,8 @@ package utilities;
 
 
 //import gmibank.pojos.Customer;
-import gmibank.pojos.Registrant;
 //import gmibank.pojos.States;
-import gmibank.pojos.User;
 
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
 public class ReadTxt {
 
 //    public static List<Customer> returnCustomer(String filePath){
