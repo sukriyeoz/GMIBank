@@ -12,13 +12,22 @@ public class LoginPage {
     }
 
     @FindBy(xpath="//input[@id='username']")
-    public WebElement userName;
+    public WebElement usernameTextbox;
 
     @FindBy(xpath="//input[@id='password']")
     public WebElement password;
 
     @FindBy(xpath="//button[@type='submit']//span[text()='Sign in']")
     public WebElement signIn;
+
+    @FindBy( id = "password")
+    public WebElement passwordTextbox;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement signInButton;
+
+    @FindBy (xpath = "//*[@class='btn btn-secondary']")
+    public WebElement cancelbutton;
 
 
 

@@ -10,20 +10,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 public class DatabaseUtility {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
     public static void createConnection() {
-//        String url = ConfigurationReader.getProperty("database_url");
-//        String user = ConfigurationReader.getProperty("database_user");
-//        String password = "Techpro_@126";
-//        try {
-//            connection = DriverManager.getConnection(url, user, password);
-//        } catch (SQLException e) {
-//
-//            e.printStackTrace();
-//        }
+        String url = ConfigReader.getProperty("database_url");
+        String user = ConfigReader.getProperty("database_user");
+        String password = "Techpro_@126";
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     public static void createConnection(String url, String user, String password) {
         try {
@@ -223,4 +224,3 @@ public class DatabaseUtility {
         return getQueryResultList(query).get(row);
     }
 }
-
