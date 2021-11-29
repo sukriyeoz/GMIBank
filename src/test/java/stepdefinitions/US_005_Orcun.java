@@ -10,8 +10,6 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.Map;
-
 public class US_005_Orcun {
 
     MainPage mainPage = new MainPage();
