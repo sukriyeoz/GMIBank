@@ -129,15 +129,4 @@ public class US003_Sedef_Registration_page_password {
         registerPage.getPassWord2.sendKeys("Strong7=");
 
     }
-//
-//    @Then("user get password_strength message")
-//    public void user_get_password_strength_message() throws InterruptedException {
-//
-//        Thread.sleep(1000);
-//        String passwordStrengthBar = registerPage.passwordStrengthBar.getText();
-//        String expectedSuccessMessage="Your password should contain at least one uppercase,one digit, one lowercase and one special character";
-//        Assert.assertEquals(expectedSuccessMessage,passwordStrengthBar);
-//      //  registerPage.passwordStrengthBar.getText("Your password should contain at least one uppercase,one digit, one lowercase and one special character")
-//    }
-
 }
