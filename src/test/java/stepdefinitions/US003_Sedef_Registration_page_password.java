@@ -104,6 +104,21 @@ public class US003_Sedef_Registration_page_password {
         registerPage.getPassWord2.sendKeys("Less7-");
     }
 
+    @Then("assert that strength bar is yellow")
+    public void assert_that_strength_bar_is_yellow() {
+        Assert.assertTrue(registerPage.yellowPasswordStrengthBar.isDisplayed());
+    }
+
+    @Then("assert that strength bar is green")
+    public void assert_that_strength_bar_is_green() {
+        Assert.assertTrue(registerPage.greenPasswordStrength.isDisplayed());
+    }
+
+    @Then("assert that strength bar is strongest green color")
+    public void assert_that_strength_bar_is_strongest_green_color() {
+      Assert.assertTrue(registerPage.greenStrongestPassword.isDisplayed());
+    }
+
 
     @Given("user enters a password which is include all required field")
     public void user_enters_a_password_which_is_include_all_required_field() {

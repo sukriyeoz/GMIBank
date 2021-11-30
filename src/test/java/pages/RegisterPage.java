@@ -39,6 +39,14 @@ public class RegisterPage {
     @FindBy(id= "secondPassword")
     public WebElement getPassWord2;
 
+    @FindBy(xpath = "//li[@class='point'][3]")
+    public WebElement yellowPasswordStrengthBar;
+
+    @FindBy(xpath = "//li[@class='point'][4]")
+    public WebElement greenPasswordStrength;
+
+    @FindBy(xpath = "//li[@class='point'][5]")
+    public WebElement greenStrongestPassword;
 
 
 //    @FindBy(id = "strengthBar")
