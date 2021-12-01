@@ -22,4 +22,10 @@ public class SigninPage {
     @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
     public WebElement failMessage;
 
+    @FindBy(xpath = "//span[text()='Did you forget your password?']")
+    public WebElement forgetPassword;
+
+    @FindBy(xpath = "//span[text()='Register a new account']")
+    public WebElement registerNewAccount;
+
 }
