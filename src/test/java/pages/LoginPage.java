@@ -29,10 +29,38 @@ public class LoginPage {
     @FindBy (xpath = "//*[@class='btn btn-secondary']")
     public WebElement cancelbutton;
 
+    @FindBy(xpath="//*[@id=\"username\"]")
+    public WebElement userName;
 
+    @FindBy(xpath = "//*[@id=\"settings-form\"]/button/span")
+    public WebElement saveButton;
 
+    @FindBy(xpath = "//span[normalize-space()='xuser xuser']")
+    public WebElement dropDown;
 
+    @FindBy(xpath = "//span[normalize-space()='User Info']")
+    public WebElement userInfo;
 
+    @FindBy(id="email")
+    public WebElement emailTextBox;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//select[@id='langKey']")
+    public WebElement languageDropDown;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
+    public WebElement failMessage;
+
+    @FindBy(xpath = "//span[text()='Did you forget your password?']")
+    public WebElement forgetPassword;
+
+    @FindBy(xpath = "//span[text()='Register a new account']")
+    public WebElement registerNewAccount;
+
+    @FindBy(xpath = "//*[@id=\"email\"]")
+    public WebElement email;
 
 
 }

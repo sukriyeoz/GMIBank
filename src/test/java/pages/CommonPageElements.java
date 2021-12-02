@@ -68,6 +68,23 @@ public class CommonPageElements {
         return element;
     }
 
+    @FindBy(id = "currentPassword")
+    public WebElement currentPassword;
+
+    @FindBy(id = "newPassword")
+    public WebElement newPassword;
+
+    @FindBy(xpath= "//li[@class='point'][2]")
+    public WebElement  line1;
+
+    @FindBy(xpath="//input[@placeholder='Please confirm your password']")
+    public WebElement confirmPassword;
+
+    @FindBy(xpath="//button[@type='submit']//span[text()='Save']")
+    public WebElement saveButton;
+
+    @FindBy(xpath="//div[text()='New password should be different from the current one.']")
+    public WebElement invalidFeedback;
 
 
 
