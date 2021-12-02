@@ -1,22 +1,14 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.apache.commons.math3.ode.JacobianMatrices;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import pages.AccountPasswordPage;
 import pages.CommonPageElements;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeListener;
 
 public class US008_Sukriye_AccountPassword_page {
 
@@ -90,26 +82,6 @@ public class US008_Sukriye_AccountPassword_page {
         System.out.println("When I enter 1 "+string2+" at the last character of 7 character password, line1 color of level chart changes");
     }
 
-//    @Then("verifies there is one bug that new password accepts at least four char")
-//    public void verifies_there_is_one_bug_that_new_password_accepts_at_least_four_char() {
-//        accountPasswordPage.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
-//        accountPasswordPage.newPassword.sendKeys("1111");
-//        accountPasswordPage.confirmPassword.sendKeys("1111");
-//        accountPasswordPage.saveButton.click();
-//        ReusableMethods.waitFor(3);
-//        String pageText= Driver.getDriver().getPageSource();
-//        Assert.assertTrue(pageText.contains("Password changed"));
-//        System.out.println("'Password can change' with 4 character, There is bug");
-//        ReusableMethods.waitFor(3);
-//        accountPasswordPage.currentPassword.clear();
-//        accountPasswordPage.newPassword.clear();
-//       accountPasswordPage.confirmPassword.clear();
-//       accountPasswordPage.currentPassword.sendKeys("1111");
-//        accountPasswordPage.newPassword.sendKeys(ConfigReader.getProperty("semra_password"));
-//       accountPasswordPage.confirmPassword.sendKeys(ConfigReader.getProperty("semra_password"));
-//        accountPasswordPage.saveButton.click();
-//       ReusableMethods.waitFor(5);
-//    }
 
     @Then("verifies that new valid password must be confirmed")
     public void verifies_that_new_valid_password_must_be_confirmed() {
