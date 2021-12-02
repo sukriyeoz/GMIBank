@@ -17,7 +17,7 @@ Feature:Password segment on homepage should be editable
 
 
 
-  @US_008-TC_00-2-3-4-5
+  @US_008-TC_00-2-3-4-5-6
   Scenario Outline:US_008 TC_00 new password should have at least 1 "<character>" to change line1 color of chart color
     Given user clicks to account menu
     And user clicks to password button to edit
@@ -28,13 +28,14 @@ Feature:Password segment on homepage should be editable
       |uppercase |A333333|
       |special |$333333|
       |digit |9aaaaaa|
+      |7chars|3333333|
 
 
-  #@US_008-TC_006
- # Scenario:US_008 TC_006 New password should have at least 7 chars
-  #  Given user clicks to account menu
-   # And user clicks to password button to edit
-   # And  verifies there is one bug that new password accepts at least four char
+#  @US_008-TC_006
+#  Scenario:US_008 TC_006 New password should have at least 7 chars
+#    Given user clicks to account menu
+#    And user clicks to password button to edit
+#   # And  verifies there is one bug that new password accepts at least four char
 
 
   @US_008-TC_007

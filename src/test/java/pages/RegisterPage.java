@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class RegisterPage {
     public RegisterPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -13,7 +15,6 @@ public class RegisterPage {
 
     @FindBy(id = "ssn")
     public WebElement getSSN;
-
 
     @FindBy (id = "firstname")
     public WebElement fName;
@@ -42,19 +43,47 @@ public class RegisterPage {
     @FindBy(id = "register-submit")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//*[contains(text(),'Registration saved!')]")
-    public WebElement successMessage;
-    // //div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']
-    // //div[@class='Toastify__toast-body']
+    @FindBy(id = "ssn")
+    public WebElement ssnTextbox;
 
+    @FindBy(id = "firstname")
+    public WebElement firstnameTextbox;
 
+    @FindBy(id = "lastname")
+    public WebElement lastnameTextbox;
 
+    @FindBy(id = "address")
+    public WebElement addressTextbox;
 
+    @FindBy(id = "mobilephone")
+    public WebElement phonenumberTextbox;
 
+    @FindBy(id = "username")
+    public WebElement usernameTextbox;
 
+    @FindBy(id = "email")
+    public WebElement emailTextbox;
 
+    @FindBy(id = "firstPassword")
+    public WebElement firstPasswordTextbox;
 
+    @FindBy(id = "secondPassword")
+    public WebElement secondPasswordTextbox;
 
+    @FindBy(xpath = "//*[text()='Registration saved!']")
+    public WebElement successMessageToastContainer;
+
+    @FindBy(css = "div.invalid-feedback")
+    public List<WebElement> errorMessages;
+
+    @FindBy(xpath= "(//div[@class='invalid-feedback'])[1]")
+    public WebElement ssnErrorMessage;
+
+    @FindBy(css= "div.invalid-feedback")
+    public WebElement phonenumberErrorMessage;
+
+    @FindBy(css = "div.invalid-feedback")
+    public WebElement emailErrorMessage;
 
 
 

@@ -1,7 +1,9 @@
-package gmibank.pojos;
+package pojos;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Account {
+public class AccountPojo {
     private int id;
     private String description;
     private int balance;
@@ -9,6 +11,8 @@ public class Account {
     private String accountStatusType;
     private String createDate;
     private String closedDate;
+
+
     public int getId() {
         return id;
     }

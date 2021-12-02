@@ -15,6 +15,25 @@ import utilities.Driver;
    // LoginPage loginPage=new LoginPage();
    // Faker faker = new Faker();
 
+
+//package stepdefinitions;
+//
+//import com.github.javafaker.Faker;
+//import io.cucumber.java.en.And;
+//import io.cucumber.java.en.Given;
+//import io.cucumber.java.en.Then;
+//import pages.LoginPage;
+//import pages.MainPage;
+//import utilities.ConfigReader;
+//import utilities.Driver;
+//
+//public class US007_Tugce_Not_Updating_with_invalid_credentials {
+//
+//    MainPage mainPage=new MainPage();
+//    LoginPage loginPage=new LoginPage();
+//    Faker faker = new Faker();
+//
+
 //    @Given("user goes to {string} loginpage")
 //    public void user_goes_to_loginpage(String string) {
 //        Driver.getDriver().get(ConfigReader.getProperty("bank_url"));

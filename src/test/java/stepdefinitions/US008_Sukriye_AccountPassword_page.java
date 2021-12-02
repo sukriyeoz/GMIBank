@@ -3,19 +3,27 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.apache.commons.math3.ode.JacobianMatrices;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import pages.AccountPasswordPage;
+import pages.CommonPageElements;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.beans.PropertyChangeListener;
+
 public class US008_Sukriye_AccountPassword_page {
 
     MainPage mainPage=new MainPage();
     LoginPage loginPage=new LoginPage();
-    AccountPasswordPage accountPasswordPage=new AccountPasswordPage();
+    CommonPageElements commonPageElements=new CommonPageElements();
+
 
     @Given("user goes to {string} loginpage")
     public void user_goes_to_loginpage(String string) {
@@ -33,7 +41,8 @@ public class US008_Sukriye_AccountPassword_page {
 
     @Given("user provides valid username")
     public void user_provides_valid_username() {
-        loginPage.userName.sendKeys(ConfigReader.getProperty("user_name"));
+        loginPage.usernameTextbox.sendKeys(ConfigReader.getProperty("user_name"));
+
     }
 
     @Given("user provides valid password")
@@ -57,24 +66,25 @@ public class US008_Sukriye_AccountPassword_page {
     }
     @Then("verifies that old password not confirmed")
     public void verifies_that_old_password_not_confirmed() {
-        accountPasswordPage.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
-       // Assert.assertTrue(accountPasswordPage.invalidFeedback.isDisplayed());
-
-        ReusableMethods.waitFor(2);
-        String pageText= Driver.getDriver().getPageSource();
-        System.out.println(pageText);
-        Assert.assertTrue(pageText.contains("New password should be different from the current one."));
+       commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
+       commonPageElements.newPassword.click();
+       commonPageElements.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
+       commonPageElements.confirmPassword.click();
+       commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
+       Assert.assertTrue(commonPageElements.invalidFeedback.isDisplayed());
+       ReusableMethods.waitFor(3);
+//        String pageText= Driver.getDriver().getPageSource();
+//        System.out.println(pageText);
+//        Assert.assertTrue(pageText.contains("New password should be different from the current one."));
 
     }
 
     @Then("enter new seven chars {string} and verifies that  should be at least one {string} at new password and level chart changes accordingly")
     public void enter_new_seven_chars_and_verifies_that_should_be_at_least_one_at_new_password_and_level_chart_changes_accordingly(String string, String string2) {
-       accountPasswordPage.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.newPassword.sendKeys(string);
+       commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.newPassword.sendKeys(string);
         ReusableMethods.waitFor(3);
-        String color = accountPasswordPage.line1.getCssValue("background-color");
+        String color = commonPageElements.line1.getCssValue("background-color");
         System.out.println(color);
         Assert.assertTrue(color.contains(ConfigReader.getProperty("orange")));
         System.out.println("When I enter 1 "+string2+" at the last character of 7 character password, line1 color of level chart changes");
@@ -103,10 +113,10 @@ public class US008_Sukriye_AccountPassword_page {
 
     @Then("verifies that new valid password must be confirmed")
     public void verifies_that_new_valid_password_must_be_confirmed() {
-        accountPasswordPage.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.newPassword.sendKeys("Bmi12345.");
-        accountPasswordPage.confirmPassword.sendKeys("Bmi12345.");
-        accountPasswordPage.saveButton.click();
+        commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.newPassword.sendKeys("Bmi12345.");
+        commonPageElements.confirmPassword.sendKeys("Bmi12345.");
+        commonPageElements.saveButton.click();
         ReusableMethods.waitFor(3);
         String pageText= Driver.getDriver().getPageSource();
         Assert.assertTrue(pageText.contains("Password changed"));
@@ -114,13 +124,13 @@ public class US008_Sukriye_AccountPassword_page {
         System.out.println("'Password change' is confirmed");
 
 
-        accountPasswordPage.currentPassword.clear();
-        accountPasswordPage.newPassword.clear();
-        accountPasswordPage.confirmPassword.clear();
-        accountPasswordPage.currentPassword.sendKeys("Bmi12345.");
-        accountPasswordPage.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
-        accountPasswordPage.saveButton.click();
+        commonPageElements.currentPassword.clear();
+        commonPageElements.newPassword.clear();
+        commonPageElements.confirmPassword.clear();
+        commonPageElements.currentPassword.sendKeys("Bmi12345.");
+        commonPageElements.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.saveButton.click();
         ReusableMethods.waitFor(3);
 
 

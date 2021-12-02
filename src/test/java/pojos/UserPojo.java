@@ -1,7 +1,9 @@
-package gmibank.pojos;
+package pojos;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User {
+public class UserPojo {
     private int id;
     private String login;
     private String firstName;
@@ -14,6 +16,7 @@ public class User {
     private String password;
     private String resetDate;
     private String ssn;
+
     public String getAddress() {
         return address;
     }

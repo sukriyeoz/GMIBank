@@ -2,15 +2,15 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import pages.LoginPage;
 import pages.MainPage;
-import pages.SigninPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US_005_Orcun {
 
     MainPage mainPage = new MainPage();
-    SigninPage singInPage = new SigninPage();
+    LoginPage loginPage = new LoginPage();
 
     @Given("user enter the GMIBank website")
     public void userEnterTheGMIBankWebsite() {
@@ -29,6 +29,6 @@ public class US_005_Orcun {
 
     @And("enter a invalid {string} in the username box")
     public void enterAInvalidInTheUsernameBox(String arg0) {
-        singInPage.userName.sendKeys(ConfigReader.getProperty("invalid_username"));
+        loginPage.usernameTextbox.sendKeys(ConfigReader.getProperty("invalid_username"));
     }
 }
