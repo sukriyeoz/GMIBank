@@ -56,6 +56,7 @@ Feature: US003_registration_password
     # And user clicks on the register_botton
     Then close the application
 
+  @smoketest
   @password_strong_chars
   Scenario: TC006_strong_password
     Given user is on the application page

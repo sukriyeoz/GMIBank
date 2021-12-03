@@ -40,6 +40,7 @@ Feature: US001 - RegistrationPage
     And User Enter the password
     Then Password should be valid
 
+  @smoketest
   Scenario: TC009 - Use java faker for valid registration
     And user enters fields with valid data
     Then user clicks on register button and sees the success message as_ "Registration saved!".

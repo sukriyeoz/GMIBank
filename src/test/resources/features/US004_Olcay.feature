@@ -21,6 +21,7 @@ Feature: US004 - Login page should accessible with valid credentials
       | xcustomer2 | Gmi12345. |
 
 
+  @smoketest
   Scenario Outline: TC002 - There should be an option to cancel login
     Given user go to GMI webpage
     And user click on the account menu

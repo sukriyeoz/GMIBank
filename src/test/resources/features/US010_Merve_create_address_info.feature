@@ -10,12 +10,14 @@ Feature:  create_address_info
     And click create a new customer button
     And user enter all required fields
 
+  @smoketest
   @Address
   Scenario: TC01_Address_cannot_be_blank
     And the address box should be left blank
     Then verify "this field is required" text message at the bottom of the address box
     Then closes the application
 
+  @smoketest
   @City
   Scenario: TC02_City_cannot_be_blank
     And city box should be left blank

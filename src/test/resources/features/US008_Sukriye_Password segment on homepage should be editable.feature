@@ -7,6 +7,7 @@ Feature: US008_is_account_password_editable
     And   user provides valid password
     And   user clicks sign in button
 
+  @smoketest
   @US_008-TC_001
   Scenario:US_008 TC_001 Old password can not be used again
     Given user clicks to account menu
@@ -29,6 +30,7 @@ Feature: US008_is_account_password_editable
     Given user clicks to account menu
     And   user clicks to password button to edit
     Then  verifies that new password is not accepted which is less than seven char
+
 
   @US_008-TC_007
   Scenario:US_008 TC_007 New password should be confirmed
