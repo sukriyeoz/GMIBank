@@ -6,6 +6,7 @@ Feature:
     And click human dropdown button right topside
     And click sign in button
 
+  @smoketest
   @TC_001 @invalidUsername
   Scenario Outline:Login page cannot be accessed with invalid username information
     And enter a invalid "<username>" in the username box
@@ -18,6 +19,7 @@ Feature:
       | username | password      |
       | admin    | ^320*E7jJ$7@2 |
 
+  @smoketest
   @TC_002 @invalidPassword
   Scenario Outline:Login page cannot be accessed with invalid password information
     And enter a valid "<username>" in the username box
