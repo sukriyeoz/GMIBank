@@ -19,7 +19,7 @@ Feature:
       | username | password      |
       | admin    | ^320*E7jJ$7@2 |
 
-  @smoketest
+
   @TC_002 @invalidPassword
   Scenario Outline:Login page cannot be accessed with invalid password information
     And enter a valid "<username>" in the username box
