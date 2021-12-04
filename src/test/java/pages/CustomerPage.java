@@ -75,8 +75,12 @@ public class CustomerPage {
     @FindBy(xpath = "//*[text()='Create Date']/following::input")
     public WebElement createDateTextbox;
 
+    @FindBy(className = "invalid-feedback")
+    public WebElement error;
+
     public WebElement account1(String account){
         return Driver.getDriver().findElement(By.xpath("//option[text()='" + account + "']"));
     }
+
 
 }

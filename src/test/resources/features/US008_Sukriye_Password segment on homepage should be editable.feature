@@ -28,15 +28,7 @@ Feature:Password segment on homepage should be editable
       |uppercase |A333333|
       |special |$333333|
       |digit |9aaaaaa|
-      |7chars|3333333|
-
-
-#  @US_008-TC_006
-#  Scenario:US_008 TC_006 New password should have at least 7 chars
-#    Given user clicks to account menu
-#    And user clicks to password button to edit
-#   # And  verifies there is one bug that new password accepts at least four char
-
+      |7chars|333333a|
 
   @US_008-TC_007
   Scenario:US_008 TC_007 New password should be confirmed
