@@ -48,7 +48,7 @@ public class US007_Tugce_VerifyWithInvalidDatas {
 
     @And("user clickss sign in button")
     public void userClickssSignInButton() {
-        loginPage.signIn.click();
+        loginPage.signInButton.click();
     }
 
     @And("clicks on dropdown button right topside")

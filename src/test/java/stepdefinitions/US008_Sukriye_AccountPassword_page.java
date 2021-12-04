@@ -1,12 +1,8 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.apache.commons.math3.ode.JacobianMatrices;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import pages.AccountPasswordPage;
 import pages.CommonPageElements;
 import pages.LoginPage;
 import pages.MainPage;
@@ -14,9 +10,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeListener;
+//import pages.AccountPasswordPage;
 
 public class US008_Sukriye_AccountPassword_page {
 
