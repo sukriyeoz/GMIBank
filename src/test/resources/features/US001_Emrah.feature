@@ -6,7 +6,7 @@ Feature: US001 - RegistrationPage
     Given User enter to webPage
     And User clicks on human icon
     And User clicks on register Button
-
+@smoketest
   Scenario: TC001 - There should be a valid SSN respecting the "-" where necessary,
   it should be 9 digits long
     And User Enter the "ssn" number
@@ -39,6 +39,7 @@ Feature: US001 - RegistrationPage
   Scenario: TC008 - User should use valid password
     And User Enter the password
     Then Password should be valid
+
 
   Scenario: TC009 - Use java faker for valid registration
     And user enters fields with valid data

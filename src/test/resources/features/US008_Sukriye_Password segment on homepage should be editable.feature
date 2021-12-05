@@ -1,5 +1,5 @@
 @US_008
-Feature:Password segment on homepage should be editable
+Feature:US008-Password segment on homepage should be editable
 
   Background:User signs in
     Given  user goes to "https://www.gmibank.com/login" loginpage
@@ -7,15 +7,12 @@ Feature:Password segment on homepage should be editable
     And   user provides valid password
     And   user clicks sign in button
 
-
-
+  @smoketest
   @US_008-TC_001
   Scenario:US_008 TC_001 Old password can not be used again
    Given user clicks to account menu
     And user clicks to password button to edit
     And  verifies that old password not confirmed
-
-
 
   @US_008-TC_00-2-3-4-5-6
   Scenario Outline:US_008 TC_00 new password should have at least 1 "<character>" to change line1 color of chart color
@@ -29,6 +26,7 @@ Feature:Password segment on homepage should be editable
       |special |$333333|
       |digit |9aaaaaa|
       |7chars|333333a|
+
 
   @US_008-TC_007
   Scenario:US_008 TC_007 New password should be confirmed
