@@ -11,15 +11,15 @@ import java.util.List;
 
 public class CommonPageElements {
 
-    public CommonPageElements(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public CommonPageElements() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//a[contains(text(),'Transfer Money')]")
     public WebElement transferMoney;
 
-    @FindBy (css = "#header-tabs li")
-    public List <WebElement> headerTabs;
+    @FindBy(css = "#header-tabs li")
+    public List<WebElement> headerTabs;
 
     @FindBy(id = "account-menu")
     public WebElement accountMenu;
@@ -57,14 +57,14 @@ public class CommonPageElements {
     @FindBy(xpath = "//*[text()='User management']")
     public WebElement userManagementButton;
 
-    @FindBys({@FindBy(xpath = "//table/tbody/tr")})
-    public List<WebElement > allUsers;
+    @FindBy(xpath = "//table/tbody/tr")
+    public List<WebElement> allUsers;
 
     @FindBy(xpath = "//thead//tr//th[7]")
     public WebElement createDateSortButton;
 
-    public WebElement activatedUser(String user){
-        WebElement element = Driver.getDriver().findElement(By.xpath("//tbody//tr[@id='"+user+"']//button[@type='button']"));
+    public WebElement activatedUser(String user) {
+        WebElement element = Driver.getDriver().findElement(By.xpath("//tbody//tr[@id='" + user + "']//button[@type='button']"));
         return element;
     }
 
@@ -73,19 +73,14 @@ public class CommonPageElements {
 
     @FindBy(id = "newPassword")
     public WebElement newPassword;
-
-    @FindBy(xpath= "//li[@class='point'][2]")
-    public WebElement  line1;
-
-    @FindBy(xpath="//input[@placeholder='Please confirm your password']")
+    @FindBy(xpath = "//li[@class='point'][2]")
+    public WebElement line1;
+    @FindBy(xpath = "//input[@placeholder='Please confirm your password']")
     public WebElement confirmPassword;
-
-    @FindBy(xpath="//button[@type='submit']//span[text()='Save']")
+    @FindBy(xpath = "//button[@type='submit']//span[text()='Save']")
     public WebElement saveButton;
-
-    @FindBy(xpath="//div[text()='New password should be different from the current one.']")
+    @FindBy(xpath = "//div[text()='New password should be different from the current one.']")
     public WebElement invalidFeedback;
-
 
 
 }
