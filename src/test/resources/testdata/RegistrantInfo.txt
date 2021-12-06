@@ -5,3 +5,4 @@ PASSWORD , USERNAME , FIRSTNAME , LASTNAME , SSN , PHONENUMBER , ADDRESS , EMAIL
 4&2fBQgtreQ9p , james.deckow , Rachele , Bailey , 867-06-3097 , 030 435-0346 , 269 Mallie Haven , RacheleBailey@gmail.com,
 duAm#O$h9y , garth.jacobi , Jim , Rau , 702-73-4235 , 1-285-141-2651 , 51295 Noe Ports , JimRau@gmail.com,
 Rk6V*y@l31S , ahmad.feeney , Cira , Orn , 468-42-5431 , 718-685-2230 , 731 Barrett Vista , CiraOrn@gmail.com,
+#LU!3xHDSR , thad.lind , Moshe , Swift , 192-59-8268 , 9763268137 , 879 Deckow Isle , MosheSwift@gmail.com,

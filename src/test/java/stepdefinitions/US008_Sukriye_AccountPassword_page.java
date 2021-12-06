@@ -31,6 +31,7 @@ public class US008_Sukriye_AccountPassword_page {
 //        mainPage.singIn.click();
 //    }
 
+
     @Given("user provides valid username")
     public void user_provides_valid_username() {
         loginPage.usernameTextbox.sendKeys(ConfigReader.getProperty("user_name"));
@@ -44,8 +45,9 @@ public class US008_Sukriye_AccountPassword_page {
 
     @Given("user clicks sign in button")
     public void user_clicks_sign_in_button() {
+        ReusableMethods.waitFor(2);
         loginPage.signIn.click();
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(5);
     }
 
     @Given("user clicks to account menu")
@@ -58,6 +60,7 @@ public class US008_Sukriye_AccountPassword_page {
     }
     @Then("verifies that old password not confirmed")
     public void verifies_that_old_password_not_confirmed() {
+
         commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.newPassword.click();
         commonPageElements.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
@@ -65,14 +68,24 @@ public class US008_Sukriye_AccountPassword_page {
         commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
         Assert.assertTrue(commonPageElements.invalidFeedback.isDisplayed());
         ReusableMethods.waitFor(3);
+
+        commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.newPassword.click();
+        commonPageElements.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        commonPageElements.confirmPassword.click();
+        commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
+        Assert.assertTrue(commonPageElements.invalidFeedback.isDisplayed());
+        ReusableMethods.waitFor(3);
+
 //        String pageText= Driver.getDriver().getPageSource();
 //        System.out.println(pageText);
 //        Assert.assertTrue(pageText.contains("New password should be different from the current one."));
-
     }
 
     @Then("enter new seven chars {string} and verifies that  should be at least one {string} at new password and level chart changes accordingly")
     public void enter_new_seven_chars_and_verifies_that_should_be_at_least_one_at_new_password_and_level_chart_changes_accordingly(String string, String string2) {
+
+        commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.newPassword.sendKeys(string);
         ReusableMethods.waitFor(3);
@@ -94,7 +107,6 @@ public class US008_Sukriye_AccountPassword_page {
         ReusableMethods.waitFor(3);
         System.out.println("'Password change' is confirmed");
 
-
         commonPageElements.currentPassword.clear();
         commonPageElements.newPassword.clear();
         commonPageElements.confirmPassword.clear();
@@ -103,6 +115,7 @@ public class US008_Sukriye_AccountPassword_page {
         commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.saveButton.click();
         ReusableMethods.waitFor(3);
+    }
 
 
-    }}
+}

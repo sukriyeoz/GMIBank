@@ -11,7 +11,7 @@ Feature: US007_Tugce_Not_Updating_with_invalid_credentials
     And   clicks on dropdown button right topside
     Given user clicks to userInfoo
 
-  @smoketest
+
   @US_007-TC_001_
   Scenario:US_007-TC_001 Email id cannot contain just digits or chars without "@" sign or "." extension
     And Clear the email boxx
@@ -21,6 +21,7 @@ Feature: US007_Tugce_Not_Updating_with_invalid_credentials
     Then user should see the error message
     Then user closes the browser
 
+  @smoketest
   @US_007-TC_002_
   Scenario:US_007-TC_002 There should not be an option of any other language other than English or Turkish
     Then user clicks to language button

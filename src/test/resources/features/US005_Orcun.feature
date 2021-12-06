@@ -1,12 +1,12 @@
-@us_005 @orcun
-Feature:
+@US_005
+Feature:US005-Login page should not be accessible with invalid credentials
 
   Background:
     Given user enter the GMIBank website
     And click human dropdown button right topside
     And click sign in button
 
-  @smoketest
+
   @TC_001 @invalidUsername
   Scenario Outline:Login page cannot be accessed with invalid username information
     And enter a invalid "<username>" in the username box
@@ -19,8 +19,8 @@ Feature:
       | username | password      |
       | admin    | ^320*E7jJ$7@2 |
 
-
-  @TC_002 @invalidPassword
+  @smoketest
+    @TC_002 @invalidPassword
   Scenario Outline:Login page cannot be accessed with invalid password information
     And enter a valid "<username>" in the username box
     And enter a invalid "<password>" in the password box
