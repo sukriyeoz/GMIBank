@@ -3,7 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.CommonPageElements;
+import pages.CommonElementsPage;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
@@ -14,7 +14,7 @@ public class US008_Sukriye_AccountPassword_page {
 
     MainPage mainPage=new MainPage();
     LoginPage loginPage=new LoginPage();
-    CommonPageElements commonPageElements=new CommonPageElements();
+    CommonElementsPage commonPageElements=new CommonElementsPage();
 
 
     @Given("user goes to {string} loginpage")
