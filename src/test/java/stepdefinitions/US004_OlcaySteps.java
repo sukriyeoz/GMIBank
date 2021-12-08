@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-import pages.CommonPageElements;
+import pages.CommonElementsPage;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
@@ -14,7 +14,7 @@ import org.junit.Assert;
 public class US004_OlcaySteps {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
-    CommonPageElements commonPageElements = new CommonPageElements();
+    CommonElementsPage commonPageElements = new CommonElementsPage();
 
     @Given("user go to GMI webpage")
     public void userGoToGMIWebpage() {

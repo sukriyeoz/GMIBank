@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CommonPageElements {
+public class CommonElementsPage {
 
-    public CommonPageElements() {
+    public CommonElementsPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
