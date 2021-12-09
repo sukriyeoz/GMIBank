@@ -1,4 +1,4 @@
-@Demo
+@Demox
 Feature: Register new applying
 
   # The customer registers on the site.
