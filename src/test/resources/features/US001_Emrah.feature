@@ -6,7 +6,12 @@ Feature: US001 - RegistrationPage
     Given User enter to webPage
     And User clicks on human icon
     And User clicks on register Button
+<<<<<<< HEAD
 @smoketest
+=======
+
+  @smoketest
+>>>>>>> master
   Scenario: TC001 - There should be a valid SSN respecting the "-" where necessary,
   it should be 9 digits long
     And User Enter the "ssn" number
@@ -45,4 +50,3 @@ Feature: US001 - RegistrationPage
     And user enters fields with valid data
     Then user clicks on register button and sees the success message as_ "Registration saved!".
     Then close the page
-

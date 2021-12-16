@@ -3,7 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.CommonPageElements;
+import pages.CommonElementsPage;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
@@ -14,7 +14,7 @@ public class US008_Sukriye_AccountPassword_page {
 
     MainPage mainPage=new MainPage();
     LoginPage loginPage=new LoginPage();
-    CommonPageElements commonPageElements=new CommonPageElements();
+    CommonElementsPage commonPageElements=new CommonElementsPage();
 
 
     @Given("user goes to {string} loginpage")
@@ -61,13 +61,7 @@ public class US008_Sukriye_AccountPassword_page {
     @Then("verifies that old password not confirmed")
     public void verifies_that_old_password_not_confirmed() {
 
-       commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
-       commonPageElements.newPassword.click();
-       commonPageElements.newPassword.sendKeys(ConfigReader.getProperty("user_password"));
-       commonPageElements.confirmPassword.click();
-       commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
-       Assert.assertTrue(commonPageElements.invalidFeedback.isDisplayed());
-       ReusableMethods.waitFor(3);
+
 
         commonPageElements.currentPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.newPassword.click();
@@ -76,6 +70,7 @@ public class US008_Sukriye_AccountPassword_page {
         commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
         Assert.assertTrue(commonPageElements.invalidFeedback.isDisplayed());
         ReusableMethods.waitFor(3);
+
 
 //        String pageText= Driver.getDriver().getPageSource();
 //        System.out.println(pageText);
@@ -115,10 +110,9 @@ public class US008_Sukriye_AccountPassword_page {
         commonPageElements.confirmPassword.sendKeys(ConfigReader.getProperty("user_password"));
         commonPageElements.saveButton.click();
         ReusableMethods.waitFor(3);
-}
+
+    }
 
 
 }
-
-
 

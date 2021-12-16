@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
-import pages.CommonPageElements;
+import pages.CommonElementsPage;
 import pages.CustomerPage;
 import pages.LoginPage;
 import pages.MainPage;
@@ -16,7 +16,7 @@ import utilities.ReusableMethods;
 public class US010_Merve_Create_Address {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
-    CommonPageElements commonPageElements = new CommonPageElements();
+    CommonElementsPage commonPageElements = new CommonElementsPage();
     CustomerPage customerPage = new CustomerPage();
     Faker faker = new Faker();
 

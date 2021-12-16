@@ -15,7 +15,11 @@ public class Hooks {
 
     //    @Before TestNG deki @BeforeMethod gibidir
 
+
 //    GLOBAL Hooks annotation
+
+    //    GLOBAL Hooks annotation
+
 //    her scenario dan once calisir
     @Before
     public void setUp(){
@@ -36,7 +40,11 @@ public class Hooks {
         Driver.closeDriver();
     }
 
+
 }
+
+
+
 
 
 

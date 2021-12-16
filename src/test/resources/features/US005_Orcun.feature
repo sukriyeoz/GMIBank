@@ -20,7 +20,11 @@ Feature:US005-Login page should not be accessible with invalid credentials
       | admin    | ^320*E7jJ$7@2 |
 
   @smoketest
+<<<<<<< HEAD
   @TC_002 @invalidPassword
+=======
+    @TC_002 @invalidPassword
+>>>>>>> master
   Scenario Outline:Login page cannot be accessed with invalid password information
     And enter a valid "<username>" in the username box
     And enter a invalid "<password>" in the password box

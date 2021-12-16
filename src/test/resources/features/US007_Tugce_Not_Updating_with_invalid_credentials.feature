@@ -20,6 +20,9 @@ Feature: US007_Tugce_Not_Updating_with_invalid_credentials
     Given enter as a new second email
     Then user should see the error message
     Then user closes the browser
+
+
+
   @smoketest
   @US_007-TC_002_
   Scenario:US_007-TC_002 There should not be an option of any other language other than English or Turkish

@@ -13,6 +13,7 @@ public class AccountResetRequestPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(xpath = "//input[@name='email']")
     public WebElement enterEmail;
     @FindBy(xpath = "//span[text()='Reset password']")

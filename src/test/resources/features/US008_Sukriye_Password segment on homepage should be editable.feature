@@ -10,7 +10,7 @@ Feature:US008-Password segment on homepage should be editable
   @smoketest
   @US_008-TC_001
   Scenario:US_008 TC_001 Old password can not be used again
-   Given user clicks to account menu
+    Given user clicks to account menu
     And user clicks to password button to edit
     And  verifies that old password not confirmed
 
@@ -33,4 +33,3 @@ Feature:US008-Password segment on homepage should be editable
     Given user clicks to account menu
     And user clicks to password button to edit
     And  verifies that new valid password must be confirmed
-
